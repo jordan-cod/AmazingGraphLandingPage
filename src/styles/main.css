@@ -1,0 +1,11 @@
+:root{
+    --orange: #D2872C;
+    --white: #FFFFFF;
+    --font-color: #766F68;
+    font-size: 18px;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
