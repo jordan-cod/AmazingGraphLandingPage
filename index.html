@@ -7,6 +7,7 @@
     <title>Amazing Graph</title>
     <link rel="stylesheet" href="./src/styles/main.css">
     <script src="./src/js/main.js"></script>
+    <script src="https://kit.fontawesome.com/86ae136dd1.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <!--Header com navegação-->
@@ -26,14 +27,29 @@
                     <a href="">Contact</a>
                 </li>
             </ul>
+            <i class="fas fa-bars menu-mobile" id="btn" onclick="Open()"></i>
+            <nav class="new-menu" id="new-menu">
+                <div class="new-nav">
+                    <i class="fas fa-times-circle" id="close" onclick="Close()"></i>
+                    <a href="" onclick="Close()">Home</a>
+                    <a href="" onclick="Close()">Features</a>
+                    <a href="" onclick="Close()">Contact</a>
+
+                </div>
+            </nav>
         </nav>
     </header>
     <!--Conteudo principal-->
     <main>
         <div class="hero">
-            <h2>Create amazing graphics</h2>
-            <p>Colaborate and create beautiful graphics with your team</p>
-            <button>Start Now</button>
+            <div class="start-now">
+                <h2>Create amazing graphics</h2>
+                <p>Colaborate and create beautiful graphics with your team</p>
+                <button>Start Now</button>
+            </div>
+            <div class="hero-img">
+                <img src="./src/images/team.jpg">
+            </div>
         </div>
     </main>
 </body>

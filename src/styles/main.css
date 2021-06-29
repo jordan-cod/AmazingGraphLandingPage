@@ -1,6 +1,8 @@
 :root{
         /*Cores*/
     --orange: #D2872C;
+    --orange-2: #c77e26;
+    --orange-3: #b9741f;
     --white: #FFFFFF;
     --gray: #766F68;
         /*Font*/
@@ -11,7 +13,7 @@
         /*espaçamentos*/
     --html-padding: 0px 5%;
     --header-height: 80px;
-
+    --hero-margin-top: 120px;
 }
 *{
     padding: 0;
@@ -25,10 +27,9 @@ ul{
     list-style: none;
 }
 body{
-    padding: var(--html-padding);
+    margin: var(--html-padding);
     font-family: var(--font-family);
 }
-
     /*Header*/
 .header{
     width: 100%;
@@ -42,9 +43,15 @@ body{
     align-items: center;
     justify-content: space-between;
 }
+/*Desabilitando o manu hamburguer no desktop*/
+#btn, .new-menu{
+    display: none;
+}
+/********************************************/
 .nav .logo{
     color: var(--orange);
     font-weight: var(--font-weight-700);
+    font-size: 1.7rem;
 }
 .nav .menu-nav{
     display: flex;
@@ -58,4 +65,134 @@ body{
 }
 .nav .menu-nav a:hover{
    border-bottom: 2px solid var(--gray);
+}
+
+/*Hero*/
+.hero{
+    margin-top: var(--hero-margin-top);
+    width: 100%;
+    display: flex;
+}
+.hero .start-now, .hero .hero-img{
+    width: 50%;
+}
+.hero .start-now h2{
+    font-size: 4.7rem;
+    color: var(--gray);
+}
+/*Areá com textos*/
+.hero .start-now{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px 0px;
+    gap: 50px;
+}
+.hero .start-now p{
+    font-size: 1.5rem;
+    color: var(--gray);
+}
+.hero .start-now button{
+    background-color: var(--orange);
+    color: var(--white);
+    font-weight: var(--font-weight-700);
+    font-size: 1.2rem;
+    margin-bottom: 57px;
+    border: none;
+    border-radius: 15px;
+    height: 60px;
+    width: 40%;
+    cursor: pointer;
+    transition: background-color .2s linear;
+}
+.hero .start-now button:hover{
+    background-color: var(--orange-2);
+}
+/*Imagem*/
+.hero-img img{
+    max-width: 100%;
+}
+
+/*Adaptação para dispositivos menores que 1920x1080*/
+@media (max-width: 1400px){
+    .hero{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .hero .start-now, .hero .hero-img{
+        width: 100%;
+    }
+    .hero .start-now{
+        align-items: center;
+        text-align: center;
+    }
+    .hero .start-now button{
+        width: 50%;
+    }
+}
+@media (max-width: 1080px){
+    .hero .start-now h2{
+        font-size: 3rem;
+    }
+}
+@media (max-width: 830px){
+    .nav .logo{
+        font-size: 1.2rem;
+    }
+    .nav #btn{
+        display: block;
+        font-size: 1.9rem;
+        color: var(--orange);
+    }
+    .nav .menu-nav{
+        display: none;
+    }
+    .open{
+        display: flex;
+        background-color: var(--orange);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        color: var(--white);
+    }
+    .new-nav{
+        position: relative;
+        width: 100%;
+        height: 100vh;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .new-nav a{
+        margin-top: 2px;
+        padding: 20px 100%;
+        color: var(--white);
+        text-transform: uppercase;
+        font-weight: var(--font-weight-500);
+        background-color: var(--orange-2);
+    }
+    .new-nav a:hover{
+        background-color: var(--orange-3);
+    }
+    #close{
+        position: absolute;
+        top: 25px;
+        right: 35px;
+        font-size: 1.9rem;
+    }
+}
+@media (max-width: 690px) {
+    .hero .start-now h2{
+        font-size: 2rem;
+    }
+    .hero .start-now p{
+        font-size: 1.3rem;
+    }
+    .hero .start-now button{
+        width: 90%;
+    }
 }
