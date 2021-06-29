@@ -6,7 +6,8 @@
 
   <h1 align="center">Amazing Graph</h1>
 
-  <p align="center">
-    Landing page to create amazing graphics
+  <p>
+    Desafio simples de uma landing page de criação de gráficos.</br>
+    Feito em HTML, CSS E JS.
   </p>
 </p>
