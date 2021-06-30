@@ -86,11 +86,12 @@ body{
     flex-direction: column;
     justify-content: space-between;
     padding: 20px 0px;
-    gap: 50px;
 }
 .hero .start-now p{
     font-size: 1.5rem;
     color: var(--gray);
+    margin-top: 25px;
+    margin-bottom: 25px;
 }
 .hero .start-now button{
     background-color: var(--orange);
