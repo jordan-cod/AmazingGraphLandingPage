@@ -29,6 +29,7 @@ ul{
 body{
     margin: var(--html-padding);
     font-family: var(--font-family);
+    overflow: hidden;
 }
     /*Header*/
 .header{
@@ -148,15 +149,19 @@ body{
     .nav .menu-nav{
         display: none;
     }
-    .open{
+    .new-menu{
         display: flex;
         background-color: var(--orange);
         position: absolute;
         top: 0;
-        left: 0;
+        right: -600px;
         width: 100%;
         height: 100vh;
         color: var(--white);
+        transition: 0.4s ease-in-out;
+    }
+    .open{
+        right: 0px;
     }
     .new-nav{
         position: relative;
@@ -170,7 +175,9 @@ body{
     }
     .new-nav a{
         margin-top: 2px;
-        padding: 20px 100%;
+        width: 100%;
+        padding: 20px;
+        text-align: center;
         color: var(--white);
         text-transform: uppercase;
         font-weight: var(--font-weight-500);
