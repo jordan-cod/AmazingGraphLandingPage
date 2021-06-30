@@ -29,7 +29,6 @@ ul{
 body{
     margin: var(--html-padding);
     font-family: var(--font-family);
-    overflow: hidden;
 }
     /*Header*/
 .header{
@@ -152,7 +151,7 @@ body{
     .new-menu{
         display: flex;
         background-color: var(--orange);
-        position: absolute;
+        position: fixed;
         top: 0;
         right: -600px;
         width: 100%;
